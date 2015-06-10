@@ -7,23 +7,13 @@ html(lang="en-US", ng-app="facebook-project")
     title Facebook-Project
   body(ng-controller="Main as main")
     .container
-      form(name="newRegisterForm", ng-submit="newRegisterForm.$valid && main.addNewPerson()", novalidate)
-        label Name
-        input(type="text", placeholder="John", ng-model="main.newPerson.name", required)
+      form(name="loginForm", ng-submit="main.login()", novalidate)
         label Email
-        input(type="email", placeholder="a@b.com", ng-model="main.email.email", required)
+        input(type="email", placeholder="a@b.com", ng-model="main.user.email", required)
         label Password
-        input(type="text", placeholder="password", ng-model="main.newPerson.password", required)
-        input(type="submit", value="Register", ng-disabled="newRegisterForm.$invalid")
-      table
-        thead
-          tr
-            th
-            th
-            th
-            th
-        tbody
-    
-
+        input(type="text", placeholder="password", ng-model="main.user.password", required)
+        input(type="submit", value="Login")
+      .app(ng-view)
+ 
     script(src="lib/build.js")
     script(src="js/main.js")
