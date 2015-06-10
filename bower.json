@@ -1,0 +1,23 @@
+{
+  "name": "facebook-project",
+  "version": "1.0.0",
+  "homepage": "https://github.com/royschuyler/facebook-project",
+  "authors": [
+    "chadcates <cates.chad@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "firebase": "~2.2.7",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4"
+  }
+}
