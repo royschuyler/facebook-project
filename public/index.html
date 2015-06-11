@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html lang="en-US" ng-app="facebook-project">
+<html lang="en-US" ng-app="angularAddresses">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Facebook-Project</title>
+    <title>Facebook App</title>
+    <link rel="stylesheet" href="lib/build.css">
+    <link rel="stylesheet" href="assets/main.css">
   </head>
-  <body ng-controller="Main as main">
+  <body>
     <div class="container">
-      <form name="loginForm" ng-submit="main.login()" novalidate>
-        <label>Email</label>
-        <input type="email" placeholder="a@b.com" ng-model="main.user.email" required>
-        <label>Password</label>
-        <input type="text" placeholder="password" ng-model="main.user.password" required>
-        <input type="submit" value="Login">
-      </form>
+      <nav>
+        <ul>
+          <li><a href="/#/">Home</a></li>
+          <li><a href="/#/contact">Contact</a></li>
+          <li><a href="/#/about">About</a></li>
+          <li><a href="/#/404">404</a></li>
+          <li><a href="/#/people">Go to App</a></li>
+          <li ng-hide="auth"><a href="/#/login">Login</a></li>
+          <li ng-show="auth"><a href="/#/logout">Logout</a></li>
+        </ul>
+      </nav>
       <div ng-view class="app"></div>
     </div>
     <script src="lib/build.js"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/main.module.js"></script>
+    <script src="assets/main.run.js"></script>
+    <script src="assets/main.constants.js"></script>
+    <script src="assets/main.filters.js"></script>
+    <script src="assets/static/static.config.js"></script>
+    <script src="assets/auth/auth.config.js"></script>
+    <script src="assets/auth/login.controller.js"></script>
+    <script src="assets/auth/logout.controller.js"></script>
+    <script src="assets/people/edit.controller.js"></script>
+    <script src="assets/people/new.controller.js"></script>
+    <script src="assets/people/people.config.js"></script>
+    <script src="assets/people/people.controller.js"></script>
+    <script src="assets/people/person.controller.js"></script>
+    <script src="assets/people/person.factory.js"></script>
   </body>
 </html>
