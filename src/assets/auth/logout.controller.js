@@ -1,5 +1,5 @@
 angular
-  .module('angularAddresses')
+  .module('facebook-project')
 
   .controller('LogoutCtrl', function ($rootScope, $scope, $location, API_URL) {
     var fb = new Firebase(API_URL);

@@ -1,5 +1,5 @@
 angular
-  .module('angularAddresses')
+  .module('facebook-project')
 
   .filter('objToArr', function () {
     return function (obj) {

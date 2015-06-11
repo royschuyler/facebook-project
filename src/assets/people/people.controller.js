@@ -1,5 +1,5 @@
 angular
-  .module('angularAddresses')
+  .module('facebook-project')
 
   .controller('PeopleCtrl', function ($rootScope, $location, Person) {
     var vm = this;

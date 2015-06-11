@@ -1,5 +1,5 @@
 angular
-  .module('angularAddresses')
+  .module('facebook-project')
 
   .run(function ($rootScope, $location, API_URL) {
     $rootScope.$on('$routeChangeStart', function (event, nextRoute) {

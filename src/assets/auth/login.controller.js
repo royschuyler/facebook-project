@@ -1,5 +1,5 @@
 angular
-  .module('angularAddresses')
+  .module('facebook-project')
 
   .controller('LoginCtrl', function ($rootScope, $scope, $location, API_URL) {
     var vm = this;

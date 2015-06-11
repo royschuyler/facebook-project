@@ -7,7 +7,7 @@
           span &times;
         h1 Address
       .modal-body
-        form(name="addressForm", novalidate)
+        form(name="facebook-project", novalidate)
           .form-group(ng-class="{'has-success': addressForm.n.$dirty && main.person.name.length > 1, 'has-error': addressForm.n.$dirty && !main.person.name}")
             label.control-label Name
             input.form-control(name="n", type="text", placeholder="John", ng-model="main.person.name", required)

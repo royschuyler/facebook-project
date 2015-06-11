@@ -1,2 +1,2 @@
 angular
-  .module('angularAddresses', ['ngRoute']);
+  .module('facebook-project', ['ngRoute']);

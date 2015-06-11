@@ -1,5 +1,5 @@
 angular
-  .module('angularAddresses')
+  .module('facebook-project')
 
   .factory('Person', function ($http, API_URL) {
     return {
