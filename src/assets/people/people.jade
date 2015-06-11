@@ -1,8 +1,8 @@
 h1 Facebook-project
-h2 Search
+h2 Search For Friends
 input(placeholder="Search", ng-model="query")
-h2 Addresses
-a.btn.btn-primary(href="#/people/new") New Address
+h2 Profiles
+a.btn.btn-primary(href="#/people/new") New Profile
 .gallery
   .person(ng-repeat="(id, person) in main.people | objToArr | orderBy:'name' | filter:query")
     a(href="#/people/{{person._id}}")

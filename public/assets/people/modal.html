@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button data-dismiss="modal" class="close"><span>&times;</span></button>
-        <h1>Address</h1>
+        <h1>Create Profile</h1>
       </div>
       <div class="modal-body">
         <form name="facebook-project" novalidate="novalidate">
@@ -12,17 +12,17 @@
             <label class="control-label">Name</label>
             <input name="n" type="text" placeholder="John" ng-model="main.person.name" required="required" class="form-control"/>
           </div>
-          <div ng-class="{'has-success': addressForm.p.$dirty &amp;&amp; main.person.phone, 'has-error': addressForm.p.$dirty &amp;&amp; !main.person.phone}" class="form-group">
-            <label class="control-label">Phone</label>
-            <input name="p" type="tel" placeholder="615-555-5555" ng-model="main.person.phone" required="required" class="form-control"/>
+          <div ng-class="{'has-success': addressForm.p.$dirty &amp;&amp; main.person.email, 'has-error': addressForm.p.$dirty &amp;&amp; !main.person.email}" class="form-group">
+            <label class="control-label">Email</label>
+            <input name="e" type="email" placeholder="@me.com" ng-model="main.person.email" required="required" class="form-control"/>
           </div>
-          <div ng-class="{'has-success': addressForm.t.$dirty &amp;&amp; main.person.twitter.length &gt; 1 &amp;&amp; main.person.twitter[0] === '@' , 'has-error': addressForm.t.$dirty &amp;&amp; (main.person.twitter.length &lt; 2 || main.person.twitter[0] !== '@')}" class="form-group">
-            <label class="control-label">Twitter</label>
-            <input name="t" type="text" placeholder="@abc123" ng-model="main.person.twitter" required="required" class="form-control"/>
+          <div ng-class="{'has-success': addressForm.t.$dirty &amp;&amp; main.person.email.length &gt; 1 &amp;&amp; main.person.email[0] === '@' , 'has-error': addressForm.t.$dirty &amp;&amp; (main.person.email.length &lt; 2 || main.person.email[0] !== '@')}" class="form-group">
+            <label class="control-label">City</label>
+            <input name="t" type="text" placeholder="where you live" ng-model="main.person.city" required="required" class="form-control"/>
           </div>
           <div ng-class="{'has-success': addressForm.t.$dirty &amp;&amp; addressForm.i.$valid , 'has-error': addressForm.t.$dirty &amp;&amp; addressForm.i.$invalid }" class="form-group">
-            <label class="control-label">Twitter</label>
-            <input name="i" type="url" placeholder="http://google.com/img.jpg" ng-model="main.person.photo" required="required" class="form-control"/>
+            <label class="control-label">About Me</label>
+            <textarea name="a" type="text" placeholder="about me" ng-model="main.person.about" required="required" class="form-control"></textarea>
           </div>
         </form>
       </div>

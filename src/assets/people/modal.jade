@@ -5,21 +5,21 @@
       .modal-header
         button.close(data-dismiss="modal")
           span &times;
-        h1 Address
+        h1 Create Profile
       .modal-body
         form(name="facebook-project", novalidate)
           .form-group(ng-class="{'has-success': addressForm.n.$dirty && main.person.name.length > 1, 'has-error': addressForm.n.$dirty && !main.person.name}")
             label.control-label Name
             input.form-control(name="n", type="text", placeholder="John", ng-model="main.person.name", required)
-          .form-group(ng-class="{'has-success': addressForm.p.$dirty && main.person.phone, 'has-error': addressForm.p.$dirty && !main.person.phone}")
-            label.control-label Phone
-            input.form-control(name="p", type="tel", placeholder="615-555-5555", ng-model="main.person.phone", required)
-          .form-group(ng-class="{'has-success': addressForm.t.$dirty && main.person.twitter.length > 1 && main.person.twitter[0] === '@' , 'has-error': addressForm.t.$dirty && (main.person.twitter.length < 2 || main.person.twitter[0] !== '@')}")
-            label.control-label Twitter
-            input.form-control(name="t", type="text", placeholder="@abc123", ng-model="main.person.twitter", required)
+          .form-group(ng-class="{'has-success': addressForm.p.$dirty && main.person.email, 'has-error': addressForm.p.$dirty && !main.person.email}")
+            label.control-label Email
+            input.form-control(name="e", type="email", placeholder="@me.com", ng-model="main.person.email", required)
+          .form-group(ng-class="{'has-success': addressForm.t.$dirty && main.person.email.length > 1 && main.person.email[0] === '@' , 'has-error': addressForm.t.$dirty && (main.person.email.length < 2 || main.person.email[0] !== '@')}")
+            label.control-label City
+            input.form-control(name="t", type="text", placeholder="where you live", ng-model="main.person.city", required)
           .form-group(ng-class="{'has-success': addressForm.t.$dirty && addressForm.i.$valid , 'has-error': addressForm.t.$dirty && addressForm.i.$invalid }")
-            label.control-label Twitter
-            input.form-control(name="i", type="url", placeholder="http://google.com/img.jpg", ng-model="main.person.photo", required)
+            label.control-label About Me
+            textarea.form-control(name="a", type="text", placeholder="about me", ng-model="main.person.about", required)
       .modal-footer
         button.btn.btn-danger(data-dismiss="modal") Cancel
         button.btn.btn-primary(ng-click="addressForm.$valid && main.saveAddress()", ng-disabled="addressForm.$invalid") Save
